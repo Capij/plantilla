@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(){
     if(this.loginForm.valid){
-      console.log("entro");
+      this.router.navigate(['/muestra']);      
     }else{
       console.log("no entro")
     }

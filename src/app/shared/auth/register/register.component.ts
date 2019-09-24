@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
 
   onRegistro(){
     if(this.registroForm.valid){
-      console.log("registrado");
+      this.router.navigate(['/login']);
     }else{
       console.log("no registrado");
     }
