@@ -21,12 +21,17 @@
           <span class="menu-spacer"></span>
           
           <div class="flex-spacer"></div>
-          <button mat-button (click)="onSignIn()"> Salir </button> 
-          <button mat-button [matMenuTriggerFor]="beforeMenu">Opciones</button>
-          <mat-menu #beforeMenu="matMenu" xPosition="before">
-            <button mat-menu-item >Perfil</button>
-            <button mat-menu-item (click)="onSignIn()">Salir</button>
-          </mat-menu>
+          <div class="size-menu">
+
+              <button mat-button (click)="onSignIn()"> Salir </button> 
+              <button mat-button [matMenuTriggerFor]="beforeMenu">Opciones</button>
+              <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <button mat-menu-item >Perfil</button>
+                <button mat-menu-item (click)="onSignIn()">Salir</button>
+              </mat-menu>
+
+          </div>
+
 
           <!--<a mat-button [routerLink]="'proyectos'"> Proyectos </a> -->
             
