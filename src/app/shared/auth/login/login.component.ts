@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private auth: AuthService) {
 
     this.loginForm =  this.createFromGroup();
 
@@ -32,7 +33,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(){
     if(this.loginForm.valid){
-      this.router.navigate(['/muestra']);      
+      this.auth.login(this.loginForm.value.email,this.loginForm.value.password)      
     }else{
       console.log("no entro")
     }

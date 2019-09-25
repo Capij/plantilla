@@ -6,7 +6,8 @@
             <mat-icon (click)="sidenav.close()">arrow_back</mat-icon>
         </button>
  
-        <a mat-list-item routerLink="/muestra">Muestra</a>
+        <a mat-list-item routerLink="/dashbord">Panel</a>
+        <a mat-list-item routerLink="/projects">Proyectos</a>
 
       </mat-nav-list>
     </mat-sidenav>
@@ -17,18 +18,13 @@
           <button mat-icon-button>
             <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
           </button>
-          <h1>Plantilla</h1>
+          <h1>Proyecta</h1>
           <span class="menu-spacer"></span>
           
           <div class="flex-spacer"></div>
           <div class="size-menu">
 
               <button mat-button (click)="onSignIn()"> Salir </button> 
-              <button mat-button [matMenuTriggerFor]="beforeMenu">Opciones</button>
-              <mat-menu #beforeMenu="matMenu" xPosition="before">
-                <button mat-menu-item >Perfil</button>
-                <button mat-menu-item (click)="onSignIn()">Salir</button>
-              </mat-menu>
 
           </div>
 

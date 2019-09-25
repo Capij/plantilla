@@ -14,6 +14,8 @@ import { RegisterComponent } from './shared/auth/register/register.component';
 import { MuestraComponent } from './pages/muestra/muestra/muestra.component';
 import { SidenavComponent } from './shared/layout/sidenav/sidenav.component';
 import { ResetComponent } from './shared/auth/reset/reset.component';
+import { PanelComponent } from './pages/panel/panel.component';
+import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ResetComponent } from './shared/auth/reset/reset.component';
     RegisterComponent,
     MuestraComponent,
     SidenavComponent,
-    ResetComponent
+    ResetComponent,
+    PanelComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,

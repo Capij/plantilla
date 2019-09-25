@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service'
 
 @Component({
   selector: 'app-register',
@@ -21,7 +22,7 @@ export class RegisterComponent implements OnInit {
   }
 
   registroForm: FormGroup;
-  constructor(private router:Router) {
+  constructor(private router:Router, private auth:AuthService) {
 
     this.registroForm = this.createFromGroup();
   
@@ -32,7 +33,7 @@ export class RegisterComponent implements OnInit {
 
   onRegistro(){
     if(this.registroForm.valid){
-      this.router.navigate(['/login']);
+      this.auth.register(this.registroForm);
     }else{
       console.log("no registrado");
     }
