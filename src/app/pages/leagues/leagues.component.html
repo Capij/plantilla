@@ -1,0 +1,61 @@
+<app-sidenav>
+    <mat-progress-bar *ngIf="!(load)" mode="indeterminate" class="progress-bar"> </mat-progress-bar>
+
+            <div class="container-fluid">
+        
+                    <div class="row my-1">
+                        <div class="col-md-12">
+            
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <h4>Ligas</h4>
+                                <button mat-fab color="primary" (click)="addleagues()">
+                                    <mat-icon aria-hidden="false" >
+                                        add
+                                    </mat-icon>
+                                </button>
+        
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+    
+                        <div class="col-md-4 mb-3" *ngFor="let league of leagues">
+                            <a href="/leagues/{{league.id}}">
+                                <mat-card class="example-card">
+                                        <mat-card-header>
+                                            <mat-card-title>{{league.name}}</mat-card-title>
+                                        </mat-card-header>
+
+                                            <img mat-card-image class="size-img img-centrado" src="{{league.img}}" alt="Photo of a Shiba Inu"  styel="background-size: cover;">
+                       
+                                        <!--
+                                        <button class="pull-right-container menu-button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                                            <mat-icon>more_vert</mat-icon>
+                                        </button>
+                                        
+                                        <mat-menu #menu="matMenu">
+                                            <button mat-menu-item (click)="onEdit(teacher)">
+                                                <mat-icon>create</mat-icon>
+                                                <span>Editar</span>
+                                            </button>
+                                            <button mat-menu-item >
+                                                <mat-icon>not_interested</mat-icon>
+                                                <span>Suspender</span>
+                                            </button>
+
+                                        </mat-menu>
+                                        -->
+                                        <mat-card-actions>
+                                            <button mat-button (click)="onEdit(league)">EDITAR</button>
+                                        </mat-card-actions>                                    
+                                </mat-card>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+            </div>
+            
+</app-sidenav> 
